@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Devzu Orders| Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center">
+  <h2 class="mianh">Order Management</h2>
+</div>
+  <!-- The Modal -->
+  <div class="d-flex justify-content-center">
+  <div class="button"> <!-- Button to Open the Modal -->
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Create New Order
+    </button></div>
+</div>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Devzu Order Management</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+              <form action="/action_page.php">
+        <div class="d-flex justify-content-center"><h1>New Order</h1></div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter id number" id="id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter Order id" id="oid">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+          <div class="form-group">
+          <label for="startdate">Start Date:</label>
+          <input type="date" id="startdate" name="startdate">
+          </div>
+          <div class="form-group">
+            <label for="duedate">Due Date:</label>
+            <input type="date" id="duedate" name="duedate">
+            </div>
+            <div class="borderborder-top-3">
+          <div class="form-group">
+            <select class="form-control" id="sel1">
+                <option>Select developer</option>
+              <option>Developer 1</option>
+              <option>Developer 2</option>
+              <option>Developer 3</option>
+              <option>Developer 4</option>
+            </select>
+        </div>
+            <div class="">
+            <div class="form-group">
+                <select class="form-control" id="sel1">
+                    <option>Status</option>
+                    <option>Not started</option>
+                  <option>In progress</option>
+                  <option>Delayed</option>
+                  <option>Completed</option>
+                </select>
+            </div>
+        <div class="form-group">
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+      </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
